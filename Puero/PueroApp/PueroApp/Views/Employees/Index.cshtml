@@ -1,0 +1,31 @@
+﻿@model List<Employee>
+
+<h1>Employees</h1>
+<div class="row">
+    <a href="/employees/createemp" class="waves-effect waves-light btn">Add employee</a>
+    <a href="/employees/deleteemp" class="waves-effect waves-light btn">Delete employee</a>
+    <a href="/home/index" class="waves-effect waves-light btn">Return to home page</a>
+</div>
+<table style="color: #fff" class="highlight">
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var emp in Model)
+        {
+            <tr>
+                <td>@emp.IdEmployee</td>
+                <td>@emp.FirstName</td>
+                <td>@emp.LastName</td>
+                <td>@emp.Email</td>
+                <td>@emp.Address</td>
+            </tr>
+        }
+    </tbody>
+</table>

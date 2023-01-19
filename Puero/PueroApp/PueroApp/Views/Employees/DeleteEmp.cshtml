@@ -1,0 +1,38 @@
+﻿@model List<Employee>
+<h1>Delete Employee</h1>
+<div class="row">
+    <form method="post" class="col s12">
+
+        <div class="row">
+            <div class="input-field col s3">
+                <input id="id" name="id" type="number" class="validate">
+                <label for="id">ID Employee to delete</label>
+            </div>
+        </div>
+
+        <button type="submit" class="waves-effect waves-light btn">Delete</button>
+    </form>
+    <table style="color: #fff" class="highlight">
+        <thead>
+            <tr>
+                <th>Employee ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var emp in Model)
+            {
+                <tr>
+                    <td>@emp.IdEmployee</td>
+                    <td>@emp.FirstName</td>
+                    <td>@emp.LastName</td>
+                    <td>@emp.Email</td>
+                    <td>@emp.Address</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

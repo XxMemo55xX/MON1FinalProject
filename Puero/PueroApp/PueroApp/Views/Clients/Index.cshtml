@@ -1,0 +1,32 @@
+﻿@model List<Client>
+
+<h1>Clients</h1>
+<div class="row">
+    <a href="/clients/createclient" class="waves-effect waves-light btn">Add client</a>
+    <a href="/clients/deleteclient" class="waves-effect waves-light btn">Delete client</a>
+    <a href="/home/index" class="waves-effect waves-light btn">Return to home page</a>
+</div>
+
+<table style="color: #fff" class="highlight">
+    <thead>
+        <tr>
+            <th>Client ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var client in Model)
+        {
+            <tr>
+                <td>@client.IdClient</td>
+                <td>@client.FirstName</td>
+                <td>@client.LastName</td>
+                <td>@client.Email</td>
+                <td>@client.Address</td>
+            </tr>
+        }
+    </tbody>
+</table>
